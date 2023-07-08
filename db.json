@@ -1,0 +1,37 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "firstname": "sai",
+      "lastname": "baba",
+      "mailid": "sai@gmail.com",
+      "mobilenumber": "9866337271",
+      "password": "Saibaba123",
+      "confirmpassword": "Saibaba123",
+      "id": 2
+    },
+    {
+      "firstname": "sai",
+      "lastname": "baba",
+      "mailid": "saib@gmail.com",
+      "mobilenumber": "9866337271",
+      "password": "Saibaba123",
+      "confirmpassword": "Saibaba123",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
