@@ -9,8 +9,11 @@ import Lnavbar from './Navbar'
 import Home from './Home'
 import Login from './Login'
 import Signup from './Signup'
+import Profile from './Profile'
 
 function App() {
+
+
   return (<>
     <BrowserRouter>
     <Routes>
@@ -18,6 +21,7 @@ function App() {
          <Route index element={<Home />} />
          <Route path="/Login" element={<Login />}/>
         <Route path="/Signup" element={<Signup />}/>
+        <Route path="/Profile" element={<Profile />}/>
          
        
       </Route>

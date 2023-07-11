@@ -3,17 +3,28 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Dropdownl from './Dropdown'
 
-import { Outlet, Link ,useLocation} from "react-router-dom";
+import { Outlet, Link ,useLocation,useNavigate} from "react-router-dom";
 
 function Lnavbar() {
+ const navigate=useNavigate()
   const {state} = useLocation();
-  const { id, color } = state; // Read values passed on state
-  console.log(state)
+
+
+  const handleclick=()=>{
+
+    if(state==null){
+      navigate("/")
+    }else{
+navigate("/",{state:{...state}})}
+  }
+
+ 
+
 
     return (<>
       <Navbar className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand><Link   style={{ textDecoration: 'none', color:"black" }}to="/">Tourism.Co</Link></Navbar.Brand>
+          <Navbar.Brand style={{ textDecoration: 'none', color:"red" }} onClick={handleclick}> Tourism.Co</Navbar.Brand>
 
           {/* navs */}
           <Nav>
@@ -35,7 +46,7 @@ function Lnavbar() {
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
-             <Dropdownl/>
+             <Dropdownl state={state}/>
             </Navbar.Text>
           </Navbar.Collapse>
         </Container>

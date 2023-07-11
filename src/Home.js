@@ -10,6 +10,7 @@ function Home(){
             <p class="text-center">Travel and experience extravagant mix of cultures in scenic landscapes and historic wonders .. </p>
             <p class="introp">Our team of travel experts will help you book your dream vacation in by considering all your travel needs. We can offer you the best package at the lowest price. Pack your bags now , and travel solo , with family and friends. </p>
             <img className="introimg" src="./tourism.png"/>
+           
         </div>
 
     {/* corousel */}

@@ -30,7 +30,7 @@ if(fname.match(/^[a-z]+$/)||fname.match(/^[A-Z]+$/)){
     seterror1("") 
     setfinaldetails(signupdetails)
 }else{
-   seterror1("first name should be in alphabets") 
+   seterror1("first name should be in alphabets*") 
 setfinaldetails("0")
 }}
 
@@ -40,7 +40,7 @@ const validlname=(e)=>{
         seterror1("") 
         setfinaldetails(signupdetails)
     }else{
-       seterror1("last name should be in alphabets") 
+       seterror1("last name should be in alphabets*") 
     setfinaldetails("0")
     }}
 
@@ -49,7 +49,7 @@ const validgmail=(e)=>{
 if(mailid.endsWith("@gmail.com")){
     seterror2("")
     setfinaldetails(signupdetails)
-}else{seterror2("Invalid Mail Id")
+}else{seterror2("Invalid Mail Id*")
 setfinaldetails("0")
 }
 }
@@ -59,7 +59,7 @@ const validnumber=(e)=>{
 if(mnumber.length==10){
     seterror2("")
     setfinaldetails(signupdetails)
-    }else{seterror2("Invalid Mobile Number")
+    }else{seterror2("Invalid Mobile Number*")
     setfinaldetails("0")
 }}
     
@@ -71,7 +71,7 @@ setpass(pass)
 setfinaldetails(signupdetails)
 seterror3("")
 }
-else{seterror3("password: starts with capital letter and combonation of letters and numbers >8")
+else{seterror3("password: starts with capital letter and combonation of letters and numbers* >8")
 setfinaldetails("0")}}
 
 const validcpass=(e)=>{
@@ -81,7 +81,7 @@ if(pass==cpass){
     seterror3("")
     setfinaldetails(signupdetails)
     }
-    else{seterror3("password and confirmpassword not matched")
+    else{seterror3("password and confirmpassword not matched*")
 setfinaldetails("0")
 }}
 
@@ -104,7 +104,7 @@ const handlesubmit=(e)=>{
         })
   
         if(b!==undefined){
-            alert("mail id is present please enter another mailid")
+            alert("mail id is present please enter another mailid*")
         }else{
             axios.post("http://localhost:3000/posts",finaldetails)  
             alert("signed up successfully goto login now")
@@ -128,13 +128,13 @@ const handlesubmit=(e)=>{
         <form onSubmit={handlesubmit}>
         <input type="text" placeholder="First Name" name='firstname' className="inputt" onChange={handleChange} onBlur={validfname}/>
         <input type="text" placeholder="Last Name" name='lastname' className="inputt" onChange={handleChange} onBlur={validlname} /><br/>
-       <span class="text-danger">*{error1}</span><br/>
+       <span class="text-danger">{error1}</span><br/>
         <input type="text" placeholder="Mail Id" name='mailid'className="inputt" onChange={handleChange}  onBlur={validgmail}/>
         <input type="number" placeholder="Mobile Number" name='mobilenumber' className="inputt" onChange={handleChange} onBlur={validnumber} /><br/>
-        <span class="text-danger">*{error2}</span><br/>
+        <span class="text-danger">{error2}</span><br/>
         <input type="password" placeholder="Password" name='password' className="inputt" onChange={handleChange} onBlur={validpass}/>
         <input type="password" placeholder="Confirm Password" name="confirmpassword" onChange={handleChange} className="inputt" onBlur={validcpass} /><br/>
-        <span class="text-danger">*{error3}</span><br/>
+        <span class="text-danger">{error3}</span><br/>
         <input type="submit" value="SignUp" class="m-2"/><br/>
         </form>
         <label class="me-2 mt-3">Already have an Account: </label>

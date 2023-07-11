@@ -21,11 +21,12 @@ function Login(){
             let b=valu.data.find((find)=>{
                 return login.gmail===find.gmail&&login.password===find.password
             })
-        if(b==undefined){
+        if(b===undefined){
 
             alert("please enter valid gmail and password")
         }else{
-            navigate('/', { state: { id: 7, color: 'green' } })
+            navigate('/',{ state: {...b} })
+                        
         }
     })
     }
