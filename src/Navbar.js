@@ -24,7 +24,7 @@ navigate("/",{state:{...state}})}
     return (<>
       <Navbar className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand style={{ textDecoration: 'none', color:"red" }} onClick={handleclick}> Tourism.Co</Navbar.Brand>
+          <Navbar.Brand className="homebutton" onClick={handleclick}>Home</Navbar.Brand>
 
           {/* navs */}
           <Nav>

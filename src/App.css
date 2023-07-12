@@ -111,6 +111,29 @@ color: black;}
   padding: 16px;
 }
 
+a{
+  text-decoration: none;
+  color: black;
+}
 
+
+/* home button */
+
+.homebutton{
+  text-decoration: none;
+   color:red
+}
+
+.homebutton:hover{
+cursor: pointer;
+color: black;
+}
+
+
+/* for login and signup button to set clickable width */
+.uij{
+  width: 100%;
+  display: block;
+}
 
 

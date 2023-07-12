@@ -26,8 +26,8 @@ const navigate=useNavigate()
       </Dropdown.Toggle>
       <Dropdown.Menu>
         <Dropdown.Item  style={state==null?{display:"none"}:{display:"block"}} onClick={handleclick}>Profile</Dropdown.Item>
-        <Dropdown.Item ><Link to="/Login">{state==null?"login":"Logout"}</Link></Dropdown.Item>
-        <Dropdown.Item style={hid}><Link to="/Signup">Signup</Link></Dropdown.Item>
+        <Dropdown.Item ><Link to="/Login" className='uij'>{state==null?"login":"Logout"}</Link></Dropdown.Item>
+        <Dropdown.Item ><Link to="/Signup" className='uij' style={hid}>Signup</Link></Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );
