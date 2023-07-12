@@ -1,10 +1,11 @@
-import {Link, Navigate} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import {useState} from 'react'
 import axios from 'axios'
 
 
 
 function Signup(){
+    const navigate=useNavigate()
     const [signupdetails,setsignupdetails]=useState("")
    const [finaldetails,setfinaldetails]=useState("")
 
@@ -94,9 +95,9 @@ const handlesubmit=(e)=>{
         
         
     }else{
-        alert("yes")
+       
 
-       axios.get("http://localhost:3000/posts",finaldetails).then(val=>{
+       axios.get("https://tourismproject-gi7h.onrender.com/posts",finaldetails).then(val=>{
         let b=val.data.find((vall)=>{
           let c=finaldetails.mailid==vall.mailid
          return c
@@ -107,7 +108,9 @@ const handlesubmit=(e)=>{
             alert("mail id is present please enter another mailid*")
         }else{
             axios.post("https://tourismproject-gi7h.onrender.com/posts",finaldetails)  
-            alert("signed up successfully goto login now")
+            alert("signed up successfully login your account now")
+            navigate("/Login")
+
             
         }
         
