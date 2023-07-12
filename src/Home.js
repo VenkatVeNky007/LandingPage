@@ -9,7 +9,7 @@ function Home(){
             <h1 class="text-danger text-center ">Tourism.Co</h1>
             <p class="text-center">Travel and experience extravagant mix of cultures in scenic landscapes and historic wonders .. </p>
             <p class="introp">Our team of travel experts will help you book your dream vacation in by considering all your travel needs. We can offer you the best package at the lowest price. Pack your bags now , and travel solo , with family and friends. </p>
-            <img className="introimg" src="./tourism.png"/>
+            <img className="introimg" src="https://freepngimg.com/download/travel/168104-travel-icon-free-download-png-hq.png"/>
            
         </div>
 
@@ -21,16 +21,16 @@ function Home(){
       <img src="https://e0.pxfuel.com/wallpapers/804/502/desktop-wallpaper-top-10-most-visited-tourist-places-in-india-popular-indian-tourism.jpg" class="d-block w-100" alt="..."/>
     </div>
     <div class="carousel-item" data-bs-interval="500">
-      <img src="./himg0.webp" class="d-block w-100" alt="..."/>
+      <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW5kaWElMjB0b3VyaXNtfGVufDB8fDB8fHww&w=1000&q=80" class="d-block w-100" alt="..."/>
     </div>
     <div class="carousel-item">
-      <img src="./himg2.avif" class="d-block w-100" alt="..."/>
+      <img src="https://www.tourmyindia.com/blog//wp-content/uploads/2018/06/Hill-Stations-Holidays.jpg" class="d-block w-100" alt="..."/>
     </div>
     <div class="carousel-item">
-      <img src="./himg3.jpg" class="d-block w-100" alt="..."/>
+      <img src="https://adda247-wp-multisite-assets.s3.ap-south-1.amazonaws.com/wp-content/uploads/multisite/sites/5/2023/06/16111548/Kedarnath.jpg" class="d-block w-100" alt="..."/>
     </div>
     <div class="carousel-item">
-      <img src="./himg4.jpg" class="d-block w-100" alt="..."/>
+      <img src="https://images.herzindagi.info/image/2022/Oct/places-to-visit.jpg" class="d-block w-100" alt="..."/>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
