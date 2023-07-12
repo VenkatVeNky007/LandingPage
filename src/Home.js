@@ -71,7 +71,7 @@ function Home(){
 
   <div class="row">
     <div class="col border rounded m-1 p-1 bg-light bg-gradient shadow p-3 mb-5 bg-body rounded ">
-    <img src="./tailor.pnghttps://venkatvenky007.github.io/LandingPage/tailor.png" class="gridimg"/>
+    <img src="tailor.pnghttps://venkatvenky007.github.io/LandingPage/tailor.png" class="gridimg"/>
     <h6 class="text-center d-inline-block ms-5">Tailor Made Travel Packages</h6>
     <p class="mt-3">We understand that every indidual is different and so are our tailor made travel packages to suit your specific travel asks and save unnecessary spends.</p>
     </div>
