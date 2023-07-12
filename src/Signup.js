@@ -106,7 +106,7 @@ const handlesubmit=(e)=>{
         if(b!==undefined){
             alert("mail id is present please enter another mailid*")
         }else{
-            axios.post("http://localhost:3000/posts",finaldetails)  
+            axios.post("https://tourismproject-gi7h.onrender.com/posts",finaldetails)  
             alert("signed up successfully goto login now")
             
         }

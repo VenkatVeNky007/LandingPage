@@ -15,7 +15,7 @@ function App() {
 
 
   return (<>
-    <BrowserRouter>
+    <BrowserRouter basename='/LandingPage'>
     <Routes>
       <Route path="/" element={<Lnavbar />}>
          <Route index element={<Home />} />
