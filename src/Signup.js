@@ -33,6 +33,7 @@ if(fname.match(/^[a-z]+$/)||fname.match(/^[A-Z]+$/)){
 }else{
    seterror1("first name should be in alphabets*") 
 setfinaldetails("0")
+e.target.value=""
 }}
 
 const validlname=(e)=>{
@@ -43,6 +44,7 @@ const validlname=(e)=>{
     }else{
        seterror1("last name should be in alphabets*") 
     setfinaldetails("0")
+    e.target.value=""
     }}
 
 const validgmail=(e)=>{
@@ -52,6 +54,7 @@ if(mailid.endsWith("@gmail.com")){
     setfinaldetails(signupdetails)
 }else{seterror2("Invalid Mail Id*")
 setfinaldetails("0")
+e.target.value=""
 }
 }
 
@@ -62,6 +65,7 @@ if(mnumber.length==10){
     setfinaldetails(signupdetails)
     }else{seterror2("Invalid Mobile Number*")
     setfinaldetails("0")
+    e.target.value=""
 }}
     
 const [pass,setpass]=useState("") //for cpass validation to send value
@@ -73,7 +77,9 @@ setfinaldetails(signupdetails)
 seterror3("")
 }
 else{seterror3("password: starts with capital letter and combonation of letters and numbers* >8")
-setfinaldetails("0")}}
+setfinaldetails("0")
+e.target.value=""}
+}
 
 const validcpass=(e)=>{
 
@@ -84,12 +90,14 @@ if(pass==cpass){
     }
     else{seterror3("password and confirmpassword not matched*")
 setfinaldetails("0")
+e.target.value=""
 }}
 
-
+const [signup,setsignup]=useState("SignUp")
 const handlesubmit=(e)=>{
-
+    
     e.preventDefault()
+ setsignup("Loading please wait")
 
     if(finaldetails==0){
         
@@ -105,13 +113,13 @@ const handlesubmit=(e)=>{
         })
   
         if(b!==undefined){
+            setsignup("SignUp")
             alert("mail id is present please enter another mailid*")
         }else{
             axios.post("https://tourismproject-gi7h.onrender.com/posts",finaldetails)  
             alert("signed up successfully login your account now")
             navigate("/Login")
-
-            
+           
         }
         
        })
@@ -129,16 +137,16 @@ const handlesubmit=(e)=>{
         <span class="text-danger"> SignUp...</span>
     <div className="signupcomponent">
         <form onSubmit={handlesubmit}>
-        <input type="text" placeholder="First Name" name='firstname' className="inputt" onChange={handleChange} onBlur={validfname}/>
-        <input type="text" placeholder="Last Name" name='lastname' className="inputt" onChange={handleChange} onBlur={validlname} /><br/>
+        <input type="text" placeholder="First Name" name='firstname' className="inputt" onChange={handleChange} onBlur={validfname} required/>
+        <input type="text" placeholder="Last Name" name='lastname' className="inputt" onChange={handleChange} onBlur={validlname} required /><br/>
        <span class="text-danger">{error1}</span><br/>
-        <input type="text" placeholder="Mail Id" name='mailid'className="inputt" onChange={handleChange}  onBlur={validgmail}/>
-        <input type="number" placeholder="Mobile Number" name='mobilenumber' className="inputt" onChange={handleChange} onBlur={validnumber} /><br/>
+        <input type="text" placeholder="Mail Id" name='mailid'className="inputt" onChange={handleChange}  onBlur={validgmail} required/>
+        <input type="number" placeholder="Mobile Number" name='mobilenumber' className="inputt" onChange={handleChange} onBlur={validnumber} required/><br/>
         <span class="text-danger">{error2}</span><br/>
-        <input type="password" placeholder="Password" name='password' className="inputt" onChange={handleChange} onBlur={validpass}/>
-        <input type="password" placeholder="Confirm Password" name="confirmpassword" onChange={handleChange} className="inputt" onBlur={validcpass} /><br/>
+        <input type="password" placeholder="Password" name='password' className="inputt" onChange={handleChange} onBlur={validpass} required/>
+        <input type="password" placeholder="Confirm Password" name="confirmpassword" onChange={handleChange} className="inputt" onBlur={validcpass} required /><br/>
         <span class="text-danger">{error3}</span><br/>
-        <input type="submit" value="SignUp" class="m-2"/><br/>
+        <input type="submit" value={signup} class="m-2"/><br/>
         </form>
         <label class="me-2 mt-3">Already have an Account: </label>
         <Link className='Link' to='/Login'><button>Login </button></Link><sub> Here.</sub>

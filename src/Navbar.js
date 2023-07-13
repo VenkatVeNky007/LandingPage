@@ -27,23 +27,18 @@ navigate("/",{state:{...state}})}
           <Navbar.Brand className="homebutton" onClick={handleclick}>Home</Navbar.Brand>
 
           {/* navs */}
-          <Nav>
+          <Nav className='navv'>
       <Nav.Item>
-        <Nav.Link><Link to="/Nav2">Top Places</Link></Nav.Link>
+        <Nav.Link><Link to="/Toplaces">Top Places</Link></Nav.Link>
       </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="./Sai">Packages</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="link-2">Book Now</Nav.Link>
-      </Nav.Item>
+            
       <Nav.Item>
         <Nav.Link eventKey="disabled" disabled>
-          Disabled
+         {state?"":"Login to avail services"}
         </Nav.Link>
       </Nav.Item>
     </Nav>
-          <Navbar.Toggle />
+          <Navbar.Toggle  />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
              <Dropdownl state={state}/>

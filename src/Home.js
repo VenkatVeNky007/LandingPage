@@ -4,8 +4,9 @@ function Home(){
 
 
     return(<>
-    <div className="mhomecur">
-        <div className="intro">
+    <div class="hmain">
+      {/* grid cell 1 */}
+        <div  className="intro">
             <h1 class="text-danger text-center ">Tourism.Co</h1>
             <p class="text-center">Travel and experience extravagant mix of cultures in scenic landscapes and historic wonders .. </p>
             <p class="introp">Our team of travel experts will help you book your dream vacation in by considering all your travel needs. We can offer you the best package at the lowest price. Pack your bags now , and travel solo , with family and friends. </p>
@@ -13,8 +14,8 @@ function Home(){
            
         </div>
 
-    {/* corousel */}
-<div className="homecur">
+    {/* corousel  grid cell two*/}
+<div className="homecur" >
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" >
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="500">

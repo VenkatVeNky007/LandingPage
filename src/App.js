@@ -10,6 +10,7 @@ import Home from './Home'
 import Login from './Login'
 import Signup from './Signup'
 import Profile from './Profile'
+import Toplaces from './Toplaces';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Lnavbar />}>
          <Route index element={<Home />} />
+         <Route path='/Toplaces' element={<Toplaces/>}/>
          <Route path="/Login" element={<Login />}/>
         <Route path="/Signup" element={<Signup />}/>
         <Route path="/Profile" element={<Profile />}/>
